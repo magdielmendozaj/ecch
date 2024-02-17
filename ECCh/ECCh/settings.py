@@ -360,3 +360,7 @@ CHANNEL_LAYERS = {
 }
 
 ASGI_APPLICATION = "asgi.application"
+
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'ecch_bucket'
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
