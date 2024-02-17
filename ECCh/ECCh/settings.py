@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-import dj_database_url
 
 """
 Django settings for ECCh project.
@@ -102,7 +101,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ECCh.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
