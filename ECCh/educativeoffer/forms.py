@@ -27,7 +27,7 @@ class CustomAlumnoCreationForm(forms.ModelForm):
     estado = forms.ModelChoiceField(label='Selecciona tu Estado', queryset=Estado.objects.all(), widget=forms.Select(attrs={'class': 'form-select', 'id': 'id_estado'}))
     municipio = forms.ModelChoiceField(label='Selecciona tu Municipio', queryset=Municipio.objects.all(), widget=forms.Select(attrs={'class': 'form-select', 'id': 'id_municipio'}))
     localidad = forms.ModelChoiceField(label='Selecciona tu Localidad', queryset=Localidad.objects.all(), widget=forms.Select(attrs={'class': 'form-select', 'id': 'id_localidad'}))
-    medioContacto = forms.ModelChoiceField(label='Selecciona uno', queryset=MedioContacto.objects.all(), widget=forms.Select(attrs={'class': 'form-select'}))
+    medioContacto = forms.ModelChoiceField(label='Selecciona un medio', queryset=MedioContacto.objects.all(), widget=forms.Select(attrs={'class': 'form-select'}))
 
     class Meta:
         model = Usuario
@@ -94,7 +94,7 @@ class CustomAsesorCreationForm(forms.ModelForm):
     n_ext = forms.IntegerField(label='Número Exterior', widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su número exterior'}))
     cedula = forms.CharField(label='Cédula profesional', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su cédula profesional'}))
         
-    grado_academico = forms.ChoiceField(label='Seleccione uno',choices=AsesorEducativo.GRADO_ACADEMICO_CHOICES, widget=forms.Select(attrs={'class': 'form-select'}))
+    grado_academico = forms.ChoiceField(label='Seleccione su grado',choices=AsesorEducativo.GRADO_ACADEMICO_CHOICES, widget=forms.Select(attrs={'class': 'form-select'}))
     especialidad = forms.ModelChoiceField(label='Seleccione la especialidad', queryset=Especialidad.objects.all(), widget=forms.Select(attrs={'class': 'form-select'}))
     sexo = forms.ModelChoiceField(label='Seleccione su sexo', queryset=Sexo.objects.all(), widget=forms.Select(attrs={'class': 'form-select'}))
     estado = forms.ModelChoiceField(label='Seleccione su Estado', queryset=Estado.objects.all(), widget=forms.Select(attrs={'class': 'form-select', 'id': 'id_estado'}))
