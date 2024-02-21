@@ -63,19 +63,19 @@ class CustomAlumnoCreationForm(forms.ModelForm):
     
     def clean_nombre(self):
         nombre = self.cleaned_data['nombre']
-        if not nombre.isalpha():
+        if not nombre.replace(' ', '').isalpha():
             raise forms.ValidationError("Por favor, ingresa solo letras en el campo de nombre.")
         return nombre
 
     def clean_apellidoPaterno(self):
         apellidoPaterno = self.cleaned_data['apellidoPaterno']
-        if not apellidoPaterno.isalpha():
+        if not apellidoPaterno.replace(' ', '').isalpha():
             raise forms.ValidationError("Por favor, ingresa solo letras en el campo de apellido paterno.")
         return apellidoPaterno
 
     def clean_apellidoMaterno(self):
         apellidoMaterno = self.cleaned_data['apellidoMaterno']
-        if not apellidoMaterno.isalpha():
+        if not apellidoMaterno.replace(' ', '').isalpha():
             raise forms.ValidationError("Por favor, ingresa solo letras en el campo de apellido materno.")
         return apellidoMaterno
 
@@ -126,19 +126,19 @@ class CustomAsesorCreationForm(forms.ModelForm):
     
     def clean_nombre(self):
         nombre = self.cleaned_data['nombre']
-        if not nombre.isalpha():
+        if not nombre.replace(' ', '').isalpha():
             raise forms.ValidationError("Por favor, ingresa solo letras en el campo de nombre.")
         return nombre
 
     def clean_apellidoPaterno(self):
         apellidoPaterno = self.cleaned_data['apellidoPaterno']
-        if not apellidoPaterno.isalpha():
+        if not apellidoPaterno.replace(' ', '').isalpha():
             raise forms.ValidationError("Por favor, ingresa solo letras en el campo de apellido paterno.")
         return apellidoPaterno
 
     def clean_apellidoMaterno(self):
         apellidoMaterno = self.cleaned_data['apellidoMaterno']
-        if not apellidoMaterno.isalpha():
+        if not apellidoMaterno.replace(' ', '').isalpha():
             raise forms.ValidationError("Por favor, ingresa solo letras en el campo de apellido materno.")
         return apellidoMaterno
 

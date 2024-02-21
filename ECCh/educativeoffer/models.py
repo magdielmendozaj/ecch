@@ -329,7 +329,7 @@ def profile_delete(sender, instance, **kwargs):
         default_storage.delete(instance.avatar.path)
 
 class Telefono(models.Model):
-    telefono = models.IntegerField(unique=True)
+    telefono = models.BigIntegerField(unique=True)
     usuario = models.ForeignKey('Usuario', on_delete=models.CASCADE)
 
     def __str__(self):
