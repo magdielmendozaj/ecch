@@ -48,8 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'educativeoffer',
     'colorfield',
+    'admin_interface',
     'rest_framework',
     'channels',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -190,8 +192,8 @@ EMAIL_USE_SSL = False
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'mjoelmagdiel1@gmail.com'
-EMAIL_HOST_PASSWORD = 'wrmu nfmj lefx mxxj'
+EMAIL_HOST_USER = 'e.e.chimalhuacan@gmail.com'
+EMAIL_HOST_PASSWORD = 'qgqd yksm kssq mgen'
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
