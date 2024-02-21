@@ -194,6 +194,7 @@ EMAIL_PORT = 587
 
 EMAIL_HOST_USER = 'escueladecapacitaciondechimalh@gmail.com'
 
+EMAIL_HOST_PASSWORD = 'eijf naal cqsr ydza'
 
 # JAZZMIN_SETTINGS = {
 #     # title of the window (Will default to current_admin_site.site_title if absent or None)
