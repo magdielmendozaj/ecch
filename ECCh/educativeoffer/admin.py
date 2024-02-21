@@ -3,6 +3,9 @@ from django.contrib import admin
 from .models import Estado, Municipio, Localidad, Usuario, Alumno, AsesorEducativo, Sexo, MedioContacto, Especialidad, Inscripcion, Asignatura, Aviso, Profile, Telefono, Escuela, Valor, Galeria, Categoria, Calificacion, Documento, ProyectoAsignacion, ProyectoFinal, ImagenProyecto, ProyectoAlumno
 # Register your models here.
 
+admin.site.site_title = 'E.C.Ch'
+admin.site.site_header = 'Escuela de Capacitación de Chimalhuacán'
+
 admin.site.register(Estado)
 admin.site.register(Municipio)
 admin.site.register(Localidad)
