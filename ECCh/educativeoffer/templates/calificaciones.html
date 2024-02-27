@@ -3,7 +3,6 @@
 {% block title %} Calificaciones de {{ usuario.get_full_name }} {% endblock %}
 
 {% block body %}
-{% load static %}
 
 <div class="container mt-4">
     <h3 class="text-center">Asignaturas de la Especialidad del Alumno {{ usuario.get_full_name }}</h3>
@@ -60,8 +59,8 @@
 
 <div class="container mt-4">
     <h3 class="text-center">Proyectos Finales del Alumno</h3>
+    {% for proyecto in proyectos_alumno %}
     <div class="row row-cols-1">
-        {% for proyecto in proyectos_alumno %}
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
@@ -80,15 +79,16 @@
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="text-center mt-3">
+                    <div class="text-center">
                         <a href="{% url 'aprobar_proyecto' proyecto.id %}" class="btn btn-primary">Aprobar Proyecto</a>
                     </div>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
-<br />
+
+</div> 
 
 {% endblock %}
